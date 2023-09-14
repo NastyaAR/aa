@@ -38,8 +38,10 @@ func ResursiveLeven(str1, str2 []rune) int {
 	return 0
 }
 
-func MatrixDamerauLeven(str1 []rune, str2 []rune, matr *matrix.Matrix) int {
+func MatrixDamerauLeven(str1 []rune, str2 []rune) (int, matrix.Matrix) {
 	operation := 0
+	matr := matrix.CreateMatrix(len(str1)+1, len(str2)+1, false)
+
 	for i := 1; i < matr.M; i++ {
 		for j := 1; j < matr.N; j++ {
 			if str1[i-1] != str2[j-1] {
@@ -56,7 +58,7 @@ func MatrixDamerauLeven(str1 []rune, str2 []rune, matr *matrix.Matrix) int {
 		}
 	}
 
-	return matr.Matr[matr.M-1][matr.N-1]
+	return matr.Matr[matr.M-1][matr.N-1], matr
 }
 
 func GetDistance(matr *matrix.Matrix, i int, j int, str1 []rune, str2 []rune) int {
@@ -92,11 +94,12 @@ func RecursivePartOfLeven(str1 []rune, str2 []rune, matr *matrix.Matrix) int {
 	}
 }
 
-func RecursiveDamerauLevenWithCache(str1 []rune, str2 []rune, matr *matrix.Matrix) int {
-	ans := RecursivePartOfLeven(str1, str2, matr)
+func RecursiveDamerauLevenWithCache(str1 []rune, str2 []rune) (int, matrix.Matrix) {
+	matr := matrix.CreateMatrix(len(str1)+1, len(str2)+1, true)
+	ans := RecursivePartOfLeven(str1, str2, &matr)
 	matr.Matr[matr.M-1][matr.N-1] = ans
 
-	return ans
+	return ans, matr
 }
 
 func DamerauLeven(str1, str2 []rune) int {

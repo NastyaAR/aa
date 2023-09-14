@@ -6,6 +6,7 @@ import (
 	"lab1.com/algs1"
 	"lab1.com/io"
 	"lab1.com/matrix"
+	"lab1.com/time_measure"
 )
 
 const (
@@ -53,15 +54,16 @@ func ChangeStringsOption(rstr1, rstr2 []rune) ([]rune, []rune, int) {
 func main() {
 	choice := 1
 	var str1, str2 []rune
-	var ok int
+	var ok, length int
 	var answers [4]int
+	var mtr1, mtr2 matrix.Matrix
 
 	io.OutputMenu()
 
 	for choice != 0 {
 		choice = io.ChooseOption()
 
-		if choice < 0 || choice > 7 {
+		if choice < 0 || choice > 8 {
 			fmt.Println("\nОшибка выбора опции!")
 			continue
 		}
@@ -84,18 +86,30 @@ func main() {
 			answers[1] = algs1.DamerauLeven(str1, str2)
 			fmt.Printf("\nРедакционное расстояние между строками = %d\n", answers[1])
 		case 5:
-			matr1 := matrix.CreateMatrix(len(str1)+1, len(str2)+1, false)
-			answers[2] = algs1.MatrixDamerauLeven(str1, str2, &matr1)
+			answers[2], mtr1 = algs1.MatrixDamerauLeven(str1, str2)
 			fmt.Printf("\nРедакционное расстояние между строками = %d\n", answers[2])
 			fmt.Println("Матрица:\n")
-			matr1.OutputMatrix()
+			mtr1.OutputMatrix()
 		case 6:
-			matr2 := matrix.CreateMatrix(len(str1)+1, len(str2)+1, true)
-			answers[3] = algs1.RecursiveDamerauLevenWithCache(str1, str2, &matr2)
+			answers[3], mtr2 = algs1.RecursiveDamerauLevenWithCache(str1, str2)
 			fmt.Printf("\nРедакционное расстояние между строками = %d\n", answers[3])
 			fmt.Println("Матрица:\n")
-			matr2.OutputMatrix()
+			mtr2.OutputMatrix()
 		case 7:
+			fmt.Print("Введите длину строк: ")
+			fmt.Scanln(&length)
+
+			rand_str1 := time_measure.GetRandomString(length)
+			rand_str2 := time_measure.GetRandomString(length)
+
+			seconds := time_measure.MeasureTime(rand_str1, rand_str2)
+
+			fmt.Println("\nРезультаты (с):")
+			fmt.Println("Рекурсивный Левенштейн: ", seconds[0])
+			fmt.Println("Рекурсивный Дамерау-Левенштейн: ", seconds[1])
+			fmt.Println("Дамерау-Левенштейн с матрицей: ", seconds[2])
+			fmt.Println("Рекурсивный Дамерау-Левенштейн + кеш: ", seconds[3])
+		case 8:
 			io.OutputMenu()
 		}
 	}
