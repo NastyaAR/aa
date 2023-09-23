@@ -18,6 +18,7 @@ func (matr *Matrix) MakeMatrix() {
 	}
 }
 
+// receiver name (m)
 func (matr *Matrix) InitMatrix() {
 	for j := 0; j < matr.N; j++ {
 		matr.Matr[0][j] = j
@@ -27,7 +28,7 @@ func (matr *Matrix) InitMatrix() {
 		matr.Matr[i][0] = i
 	}
 
-	if matr.Inf == true {
+	if matr.Inf {
 		for i := 1; i < matr.M; i++ {
 			for j := 1; j < matr.N; j++ {
 				matr.Matr[i][j] = -1

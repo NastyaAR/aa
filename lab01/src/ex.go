@@ -9,6 +9,7 @@ import (
 	"lab1.com/time_measure"
 )
 
+// camel case
 const (
 	SUCCESS        = 0
 	INP_STR_ERR    = -1
@@ -27,6 +28,7 @@ func ImputStringsOption() ([]rune, []rune, int) {
 	return rstring1, rstring2, SUCCESS
 }
 
+// возвращать ошибки, почитать про тип error
 func ChangeStringsOption(rstr1, rstr2 []rune) ([]rune, []rune, int) {
 	var choice int
 	fmt.Print("Введите 1, если хотите изменить первую строку, 2 - вторую: ")
@@ -56,8 +58,9 @@ func main() {
 	var str1, str2 []rune
 	var ok, length int
 	var answers [4]int
-	var mtr1, mtr2 matrix.Matrix
+	var mtr, mtr1, mtr2 matrix.Matrix
 
+	// перекрывает стандартный пакет
 	io.OutputMenu()
 
 	for choice != 0 {
@@ -80,8 +83,9 @@ func main() {
 				continue
 			}
 		case 3:
-			answers[0] = algs1.ResursiveLeven(str1, str2)
+			answers[0], mtr = algs1.MatrixLeven(str1, str2)
 			fmt.Printf("\nРедакционное расстояние между строками = %d\n", answers[0])
+			mtr.OutputMatrix()
 		case 4:
 			answers[1] = algs1.DamerauLeven(str1, str2)
 			fmt.Printf("\nРедакционное расстояние между строками = %d\n", answers[1])
@@ -105,7 +109,7 @@ func main() {
 			seconds := time_measure.MeasureTime(rand_str1, rand_str2)
 
 			fmt.Println("\nРезультаты (с):")
-			fmt.Println("Рекурсивный Левенштейн: ", seconds[0])
+			fmt.Println("Левенштейн с матрицей: ", seconds[0])
 			fmt.Println("Рекурсивный Дамерау-Левенштейн: ", seconds[1])
 			fmt.Println("Дамерау-Левенштейн с матрицей: ", seconds[2])
 			fmt.Println("Рекурсивный Дамерау-Левенштейн + кеш: ", seconds[3])

@@ -5,6 +5,7 @@ import (
 )
 
 func GetMin(values ...int) int {
+	// камель кейс
 	cur_min := values[0]
 
 	for _, val := range values {
@@ -36,6 +37,24 @@ func ResursiveLeven(str1, str2 []rune) int {
 	}
 
 	return 0
+}
+
+func MatrixLeven(str1 []rune, str2 []rune) (int, matrix.Matrix) {
+	operation := 0
+	matr := matrix.CreateMatrix(len(str1)+1, len(str2)+1, false)
+
+	for i := 1; i < matr.M; i++ {
+		for j := 1; j < matr.N; j++ {
+			if str1[i-1] != str2[j-1] {
+				operation = 1
+			} else {
+				operation = 0
+			}
+			matr.Matr[i][j] = GetMin(matr.Matr[i][j-1]+1, matr.Matr[i-1][j]+1, matr.Matr[i-1][j-1]+operation)
+		}
+	}
+
+	return matr.Matr[matr.M-1][matr.N-1], matr
 }
 
 func MatrixDamerauLeven(str1 []rune, str2 []rune) (int, matrix.Matrix) {

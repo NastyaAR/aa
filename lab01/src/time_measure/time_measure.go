@@ -1,7 +1,6 @@
 package time_measure
 
 import (
-	// "fmt"
 	"math/rand"
 	"syscall"
 
@@ -9,8 +8,10 @@ import (
 	"lab1.com/matrix"
 )
 
-const N int = 100
+const N int = 1000
 const symbols string = "abcdefghijklmnopqrstuvwxyz"
+
+// приватная переменная
 const MaxInd int = 26
 
 func GetCPU() int64 {
@@ -28,18 +29,21 @@ func GetRandomString(len int) []rune {
 	return rstr
 }
 
-func RecLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
+func MatrixLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
 	var sum float32
 
 	var startTime, finishTime int64
 	var ans int
+	var mtr matrix.Matrix
 
 	for i := 0; i < N; i++ {
 		startTime = GetCPU()
-		ans = algs1.ResursiveLeven(str1, str2)
+		ans, mtr = algs1.MatrixLeven(str1, str2)
 		finishTime = GetCPU()
 		sum += float32(finishTime - startTime)
 	}
+
+	mtr.Matr[0][0] += 1
 
 	return (sum / float32(N)) / 1e+9, ans
 }
@@ -102,7 +106,7 @@ func MeasureTime(rstr1 []rune, rstr2 []rune) [4]float32 {
 	var seconds [4]float32
 	var ans int
 
-	seconds[0], ans = RecLevenTimeMeasurement(rstr1, rstr2)
+	seconds[0], ans = MatrixLevenTimeMeasurement(rstr1, rstr2)
 	seconds[1], ans = DamerauLevenTimeMeasurement(rstr1, rstr2)
 	seconds[2], ans = MatrixDamerauLevenTimeMeasurement(rstr1, rstr2)
 	seconds[3], ans = RecursiveDamerauLevenWithCacheTimeMeasurement(rstr1, rstr2)

@@ -4,33 +4,6 @@ import (
 	"testing"
 )
 
-func BenchmarkRecursiveLeven5(b *testing.B) {
-	s1 := []rune("point")
-	s2 := []rune("lines")
-
-	for i := 0; i < b.N; i++ {
-		ResursiveLeven(s1, s2)
-	}
-}
-
-func BenchmarkRecursiveLen10(b *testing.B) {
-	s1 := []rune("pointlucky")
-	s2 := []rune("linesviews")
-
-	for i := 0; i < b.N; i++ {
-		ResursiveLeven(s1, s2)
-	}
-}
-
-func BenchmarkRecursiveLen15(b *testing.B) {
-	s1 := []rune("pointluckycrazy")
-	s2 := []rune("linesviewslikes")
-
-	for i := 0; i < b.N; i++ {
-		ResursiveLeven(s1, s2)
-	}
-}
-
 func BenchmarkDamerauLeven5(b *testing.B) {
 	s1 := []rune("point")
 	s2 := []rune("lines")
@@ -145,5 +118,50 @@ func BenchmarkMatrixDamerauLevenCacheLen100(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
 		RecursiveDamerauLevenWithCache(s1, s2)
+	}
+}
+
+func BenchmarkMatrixLevenLen5(b *testing.B) {
+	s1 := []rune("point")
+	s2 := []rune("lines")
+
+	for i := 0; i < b.N; i++ {
+		MatrixLeven(s1, s2)
+	}
+}
+
+func BenchmarkMatrixLevenLen10(b *testing.B) {
+	s1 := []rune("pointlucky")
+	s2 := []rune("linesviews")
+
+	for i := 0; i < b.N; i++ {
+		MatrixLeven(s1, s2)
+	}
+}
+
+func BenchmarkMatrixLevenLen15(b *testing.B) {
+	s1 := []rune("pointluckycrazy")
+	s2 := []rune("linesviewslikes")
+
+	for i := 0; i < b.N; i++ {
+		MatrixLeven(s1, s2)
+	}
+}
+
+func BenchmarkMatrixLevenLen50(b *testing.B) {
+	s1 := []rune("wpyibmiiniednngwziyqgeykknlfourltggbkwquqctwphduhm")
+	s2 := []rune("rplsaehpegyzrzdmvzrhyyjfyzryztocdvrcisnfdmnewevncw")
+
+	for i := 0; i < b.N; i++ {
+		MatrixLeven(s1, s2)
+	}
+}
+
+func BenchmarkMatrixLevenLen100(b *testing.B) {
+	s1 := []rune("sptjdsihnhmnazevbjigfregecmdkiqlysbmcqekymzbufrqcrkrawofpbjuvskkrbkqrhiokxqzqwjjseppbhreddsnikcwsuyq")
+	s2 := []rune("uuxahkjlvwefmbhrtgbwozechtqkdyxcoqsldeuxxjkrkzwjcpuavsmliwfiznnkywmfcilkyugztnksajmippfilenxcutjbhqp")
+
+	for i := 0; i < b.N; i++ {
+		MatrixLeven(s1, s2)
 	}
 }

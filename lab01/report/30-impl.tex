@@ -1,0 +1,101 @@
+\chapter{Технологическая часть}
+
+В данном разделе представлены требования к программному обеспечению, а также рассматриваются средства реализации и приводятся листинги кода.
+
+\section{Требования к ПО}
+
+К программе предъявляется ряд требований:
+\begin{itemize}
+	\item[--] на вход подаются две строки;
+	\item[--] на выходе — искомое расстояние для всех четырех методов и матрицы расстояний для всех методов, которые подразумевают использование матрицы.
+\end{itemize}
+
+\section{Средства реализации}
+
+В качестве языка программирования для реализации лабораторной работы был выбран многопоточный язык GO \cite{golang}. Выбор был сделан в пользу данного языка программирования, вследствие моего желания освоить данный язык программирования.
+
+\section{Листинг кода}
+
+В листингах 3.1--3.4 приведены реализации алгоритмов Левенштейна и Дамерау-Левенштейна.
+\newpage
+
+\begin{lstinputlisting}[
+	caption={Матричный (Левенштейн)},
+	label={lst:levenshteinmat},
+	style={go},
+	linerange={41-57},
+	]{../src/algs1/algs1.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Рекурсивный (Дамерау-Левенштейн)},
+	label={lst:dlevenshteinrec},
+	style={go},
+	linerange={123-148},
+	]{../src/algs1/algs1.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Матричный (Дамерау-Левенштейн)},
+	label={lst:dlevenshteinmatr},
+	style={go},
+	linerange={59-80},
+	]{../src/algs1/algs1.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Рекурсивный с кешем (Дамерау-Левенштейн)},
+	label={lst:dlevenshteincache},
+	style={go},
+	linerange={82-121},
+	]{../src/algs1/algs1.go}
+\end{lstinputlisting}
+
+В листинге 3.5 приведён класс Matrix и его методы.
+
+\begin{lstinputlisting}[
+	caption={Класс Matrix},
+	label={lst:matrix},
+	style={go},
+	]{../src/matrix/matrix.go}
+\end{lstinputlisting}
+
+В листинге 3.6 приведен модуль для замеров процессорного времени выполнения программы.
+
+\begin{lstinputlisting}[
+	caption={Измерение времени},
+	label={lst:time},
+	style={go},
+	]{../src/time\_measure/time\_measure.go}
+\end{lstinputlisting}
+
+\section{Функциональное тестирование}
+
+В таблице \ref{tabular:functional_test} приведены функциональные тесты для алгоритмов вычисления расстояния Левенштейна и Дамерау-Левенштейна.
+
+Обозначим: 
+\begin{itemize}
+	\item[--] 1 - Левенштейн;
+	\item[--] 2 - Дамерау-Левештейн;
+	\item[--] 3 - Дамерау-Левенштейн матричный;
+	\item[--] 4 - Дамерау-Левенштейн с кешем.
+\end{itemize}
+
+\begin{table}[h]
+	\begin{center}
+		\caption{\label{tabular:functional_test} Функциональные тесты}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			                    &                    & \multicolumn{4}{c|}{\bfseries Ожидаемый результат}    \\ \cline{3-6}
+			\bfseries Строка 1  & \bfseries Строка 2 & \bfseries 1 & \bfseries 2 & \bfseries 3 & \bfseries 4
+				\csvreader[separator=comma]{inc/csv/functional-test.csv}{}
+				{\\\hline \csvlinetotablerow}
+				\\\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+\section*{Вывод}
+
+В результате, были разработаны следующие алгоритмы: алгоритм нахождения редакционного расстояния Левенштейна, Дамерау-Левенштейна, алгоритм  Дамерау-Левенштейна итерационный, алгоритм Дамерау-Левенштейна с кешированием.
