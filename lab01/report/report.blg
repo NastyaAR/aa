@@ -11,11 +11,12 @@ A level-1 auxiliary file: 40-research.aux
 A level-1 auxiliary file: 50-conclusion.aux
 A level-1 auxiliary file: 51-biblio.aux
 The style file: utf8gost705u.bst
+A level-1 auxiliary file: 60-addition.aux
 Database file #1: 51-biblio.bib
 Warning--empty booktitle in Levenshtein
 You've used 5 entries,
             2958 wiz_defined-function locations,
-            695 strings with 6211 characters,
+            696 strings with 6243 characters,
 and the built_in function-call counts, 910 in all, are:
 = -- 104
 > -- 9

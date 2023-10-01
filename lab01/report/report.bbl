@@ -12,7 +12,7 @@
 Левенштейн~В.~И. Двоичные коды с
   исправлением выпадений, вставок и
   замещений символов.
-\newblock -- М.: Доклады АН СССР, 1965.
+\newblock --- М.: Доклады АН СССР, 1965.
 \newblock Т.~163.
 \newblock {С.}~845--848.
 
@@ -24,9 +24,10 @@ The Go Programming Language [Электронный ресурс].
 
 \bibitem{ubuntu}
 \selectlanguageifdefined{russian}
-Linux -- Википедия [Электронный ресурс].
-\newblock Режим доступа: \url{https://ru.wikipedia.org/wiki/Ubuntu}
-  (дата обращения: 15.09.2023).
+Linux --- Официальная документация
+  [Электронный ресурс].
+\newblock Режим доступа: \url{https://www.linux.org/} (дата
+  обращения: 15.09.2023).
 
 \bibitem{amd}
 \selectlanguageifdefined{russian}

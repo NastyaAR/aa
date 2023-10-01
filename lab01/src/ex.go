@@ -9,7 +9,6 @@ import (
 	"lab1.com/time_measure"
 )
 
-// camel case
 const (
 	SUCCESS        = 0
 	INP_STR_ERR    = -1
@@ -28,7 +27,6 @@ func ImputStringsOption() ([]rune, []rune, int) {
 	return rstring1, rstring2, SUCCESS
 }
 
-// возвращать ошибки, почитать про тип error
 func ChangeStringsOption(rstr1, rstr2 []rune) ([]rune, []rune, int) {
 	var choice int
 	fmt.Print("Введите 1, если хотите изменить первую строку, 2 - вторую: ")
@@ -60,7 +58,6 @@ func main() {
 	var answers [4]int
 	var mtr, mtr1, mtr2 matrix.Matrix
 
-	// перекрывает стандартный пакет
 	io.OutputMenu()
 
 	for choice != 0 {

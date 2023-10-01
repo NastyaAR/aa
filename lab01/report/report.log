@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.16)  19 SEP 2023 11:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.16)  30 SEP 2023 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1084,13 +1084,10 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 )) (./report.aux
 (./00-title.aux) (./01-contents.aux) (./02-intro.aux) (./10-analysis.aux
 
-LaTeX Warning: Label `eq:D' multiply defined.
-
-
 LaTeX Warning: Label `eq:m' multiply defined.
 
 ) (./20-design.aux) (./30-impl.aux) (./40-research.aux) (./50-conclusion.aux)
-(./51-biblio.aux))
+(./51-biblio.aux) (./60-addition.aux))
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1240,7 +1237,7 @@ Package geometry Warning: `pdftex': not available in `\newgeometry'; skipped.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<inc/img/b_logo.jpg, id=95, 57.816pt x 65.3715pt>
+<inc/img/b_logo.jpg, id=99, 57.816pt x 65.3715pt>
 File: inc/img/b_logo.jpg Graphic file (type jpg)
 <use inc/img/b_logo.jpg>
 Package pdftex.def Info: inc/img/b_logo.jpg  used on input line 5.
@@ -1301,32 +1298,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Overfull \hbox (145.11053pt too wide) in paragraph at lines 22--26
+ []$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--33
 
  []
 
@@ -1353,23 +1355,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--30
 
  (./02-intro.tex
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-13.
+11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-Overfull \hbox (4.40535pt too wide) in paragraph at lines 24--25
-[]\T2A/cmr/m/n/14.4 Получение прак-ти-че-ских на-вы-ков ре-а-ли-за-ции ал-го-ри
-т-мов Ле-вен-штей-
- []
-
-
-Overfull \hbox (3.2606pt too wide) in paragraph at lines 25--26
-[]\T2A/cmr/m/n/14.4 Сравнительный ана-лиз ал-го-рит-мов на ос-но-ве экс-пе-ри-м
-ен-таль-ных дан-
- []
-
-) [3
+)) [3
 
 
 
@@ -1377,7 +1367,8 @@ Overfull \hbox (3.2606pt too wide) in paragraph at lines 25--26
 ]
 \openout2 = `10-analysis.aux'.
 
- (./10-analysis.tex
+
+(./10-analysis.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
 
 Overfull \hbox (8.00755pt too wide) in paragraph at lines 3--4
@@ -1391,28 +1382,33 @@ Overfull \hbox (8.00755pt too wide) in paragraph at lines 3--4
 
 
 ]
-Overfull \hbox (3.25102pt too wide) in paragraph at lines 22--22
+Overfull \hbox (9.36667pt too wide) in paragraph at lines 22--22
  |[]\T2A/cmr/bx/n/20.74 Рекурсивный ал-го-ритм на-хож-де-ния рас-
  []
 
 [5
 
 ] [6]
-Overfull \hbox (3.25102pt too wide) in paragraph at lines 119--119
+Overfull \hbox (9.36667pt too wide) in paragraph at lines 123--123
  |[]\T2A/cmr/bx/n/20.74 Рекурсивный ал-го-ритм на-хож-де-ния рас-
  []
 
 [7]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 135.
+LaTeX Font Warning: Command \small invalid in math mode on input line 149.
 
 [8]
-Overfull \hbox (3.25102pt too wide) in paragraph at lines 174--174
+Overfull \hbox (9.36667pt too wide) in paragraph at lines 177--177
  |[]\T2A/cmr/bx/n/20.74 Рекурсивный ал-го-ритм на-хож-де-ния рас-
  []
 
 
-Overfull \hbox (4.9708pt too wide) in paragraph at lines 177--178
+Overfull \hbox (0.9942pt too wide) in paragraph at lines 177--177
+ \T2A/cmr/bx/n/20.74 сто-я-ния Дамерау-Левенштейна с за-пол-
+ []
+
+
+Overfull \hbox (4.9708pt too wide) in paragraph at lines 180--181
 []\T2A/cmr/m/n/14.4 Рекурсивную ре-а-ли-за-цию ал-го-рит-ма Дамерау-Левенштейна
  мож-но уско-
  []
@@ -1422,103 +1418,58 @@ Overfull \hbox (4.9708pt too wide) in paragraph at lines 177--178
 
  (./20-design.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 2.
+<inc/img/lev_m.png, id=198, 764.8575pt x 866.23625pt>
+File: inc/img/lev_m.png Graphic file (type png)
+<use inc/img/lev_m.png>
+Package pdftex.def Info: inc/img/lev_m.png  used on input line 7.
+(pdftex.def)             Requested size: 464.78844pt x 526.37598pt.
+[11
 
-Overfull \hbox (5.13022pt too wide) in paragraph at lines 7--7
+
+
+
+ <./inc/img/lev_m.png (PNG copy)>]
+Overfull \hbox (11.24586pt too wide) in paragraph at lines 11--11
  |[]\T2A/cmr/bx/n/20.74 Схема ал-го-рит-ма Дамерау-Левенштейна| 
  []
 
-
-Overfull \hbox (51.58934pt too wide) in paragraph at lines 9--10
-[]\T2A/cmr/m/n/14.4 На ри-сун-ке []2.2[] при-ве-де-на схе-ма ре-кур-сив-но-го а
-л-го-рит-ма Дамерау-Левенштейна. 
- []
-
-
-Overfull \hbox (47.78491pt too wide) in paragraph at lines 11--12
-[]\T2A/cmr/m/n/14.4 На ри-сун-ке []2.3[] при-ве-де-на схе-ма ре-кур-сив-но-го а
-л-го-рит-ма Дамерау-Левенштейна
- []
-
-
-Overfull \hbox (40.55028pt too wide) in paragraph at lines 13--14
-[]\T2A/cmr/m/n/14.4 На ри-сун-ке []2.5[] при-ве-де-на схе-ма мат-рич-но-го ал-г
-о-рит-ма Дамерау-Левенштейна. 
- []
-
-
-Overfull \hbox (25.51607pt too wide) in paragraph at lines 17--18
-[]\T2A/cmr/m/n/14.4 В дан-ном раз-де-ле пред-став-ле-ны схе-мы ал-го-рит-мов Ле
--вен-штей-на и Дамерау-
- []
-
-<inc/img/lev_m.png, id=216, 764.8575pt x 866.23625pt>
-File: inc/img/lev_m.png Graphic file (type png)
-<use inc/img/lev_m.png>
-Package pdftex.def Info: inc/img/lev_m.png  used on input line 19.
-(pdftex.def)             Requested size: 552.72769pt x 625.96062pt.
-
-Overfull \hbox (83.2572pt too wide) in paragraph at lines 19--19
- [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<inc/img/dlev.png, id=217, 860.21375pt x 1139.25626pt>
+<inc/img/dlev.png, id=205, 860.21375pt x 1139.25626pt>
 File: inc/img/dlev.png Graphic file (type png)
 <use inc/img/dlev.png>
-Package pdftex.def Info: inc/img/dlev.png  used on input line 21.
-(pdftex.def)             Requested size: 472.63336pt x 625.96062pt.
-
-Overfull \hbox (3.16287pt too wide) in paragraph at lines 21--21
- [] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<inc/img/dlevc.png, id=218, 860.21375pt x 1258.7025pt>
+Package pdftex.def Info: inc/img/dlev.png  used on input line 15.
+(pdftex.def)             Requested size: 429.67267pt x 569.05511pt.
+[12 <./inc/img/dlev.png (PNG copy)>]
+<inc/img/dlevc.png, id=213, 860.21375pt x 1258.7025pt>
 File: inc/img/dlevc.png Graphic file (type png)
 <use inc/img/dlevc.png>
-Package pdftex.def Info: inc/img/dlevc.png  used on input line 23.
-(pdftex.def)             Requested size: 427.78255pt x 625.96062pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<inc/img/part.png, id=219, 591.20876pt x 414.54875pt>
+Package pdftex.def Info: inc/img/dlevc.png  used on input line 21.
+(pdftex.def)             Requested size: 388.89084pt x 569.05511pt.
+<inc/img/part.png, id=214, 591.20876pt x 414.54875pt>
 File: inc/img/part.png Graphic file (type png)
 <use inc/img/part.png>
-Package pdftex.def Info: inc/img/part.png  used on input line 25.
+Package pdftex.def Info: inc/img/part.png  used on input line 23.
 (pdftex.def)             Requested size: 405.78746pt x 284.52756pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<inc/img/dlev_m.png, id=220, 764.8575pt x 958.58125pt>
+[13 <./inc/img/dlevc.png (PNG copy)>]
+<inc/img/dlev_m.png, id=223, 764.8575pt x 958.58125pt>
 File: inc/img/dlev_m.png Graphic file (type png)
 <use inc/img/dlev_m.png>
-Package pdftex.def Info: inc/img/dlev_m.png  used on input line 27.
-(pdftex.def)             Requested size: 522.16194pt x 654.41338pt.
-
-Overfull \hbox (52.69145pt too wide) in paragraph at lines 27--27
- [] 
- []
+Package pdftex.def Info: inc/img/dlev_m.png  used on input line 29.
+(pdftex.def)             Requested size: 408.65202pt x 512.1496pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [11
-
-
-
-
-] [12 <./inc/img/lev_m.png (PNG copy)>] [13 <./inc/img/dlev.png (PNG copy)>] [1
-4 <./inc/img/dlevc.png (PNG copy)>] [15 <./inc/img/part.png (PNG copy)>]
-[16 <./inc/img/dlev_m.png (PNG copy)>]
+[14 <./inc/img/part.png (PNG copy)>]) [15 <./inc/img/dlev_m.png (PNG copy)>]
 \openout2 = `30-impl.aux'.
 
- (./30-impl.tex
+
+(./30-impl.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 3.
-[17
+[16
 
 
 
@@ -1545,76 +1496,65 @@ consecutive:
 )
 Package keyval Info: directivestyle undefined on input line 43.
 Package keyval Info: directivestyle undefined on input line 43.
- [18] (../src/algs1/algs1.go
+ [17] (../src/algs1/algs1.go
 consecutive:
-)
-Package keyval Info: directivestyle undefined on input line 51.
-Package keyval Info: directivestyle undefined on input line 51.
+) [18]
+Package keyval Info: directivestyle undefined on input line 53.
+Package keyval Info: directivestyle undefined on input line 53.
  (../src/algs1/algs1.go
 consecutive:
-[19])
-Package keyval Info: directivestyle undefined on input line 60.
-Package keyval Info: directivestyle undefined on input line 60.
- (../src/matrix/matrix.go [20])
-Package keyval Info: directivestyle undefined on input line 69.
-Package keyval Info: directivestyle undefined on input line 69.
- (../src/time_measure/time_measure.go
-[21] [22] [23]))
-Overfull \hbox (37.70062pt too wide) in paragraph at lines 101--16
-\T2A/cmr/m/n/14.4 ал-го-ритм Дамерау-Левенштейна ите-ра-ци-он-ный, ал-го-ритм Д
-амерау-Левенштейна
- []
-
-[24]
+) [19] [20]
+<inc/img/example2.png, id=371, 253.69781pt x 505.89pt>
+File: inc/img/example2.png Graphic file (type png)
+<use inc/img/example2.png>
+Package pdftex.def Info: inc/img/example2.png  used on input line 90.
+(pdftex.def)             Requested size: 228.30269pt x 455.24408pt.
+ [21 <./inc/img/example2.png (PNG copy)>]) [22]
 \openout2 = `40-research.aux'.
 
  (./40-research.tex
 {\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 4.
-<inc/img/work.png, id=574, 264.99pt x 510.40688pt>
-File: inc/img/work.png Graphic file (type png)
-<use inc/img/work.png>
-Package pdftex.def Info: inc/img/work.png  used on input line 7.
-(pdftex.def)             Requested size: 236.36195pt x 455.24408pt.
-[25
 
-
-
-
- <./inc/img/work.png (PNG copy)>]
-Overfull \hbox (4.95291pt too wide) in paragraph at lines 26--27
+Overfull \hbox (4.95291pt too wide) in paragraph at lines 20--21
 []\T2A/cmr/m/n/14.4 Для по-лу-че-ния вре-ме-ни ис-поль-зо-ва-ния ЦПУ, из-вле-ка
 -ем ат-ри-бу-ты струк-
  []
 
+[23
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-<inc/img/graph.png, id=585, 462.528pt x 346.896pt>
+
+
+]
+<inc/img/graph.png, id=393, 462.528pt x 346.896pt>
 File: inc/img/graph.png Graphic file (type png)
 <use inc/img/graph.png>
-Package pdftex.def Info: inc/img/graph.png  used on input line 56.
-(pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
+Package pdftex.def Info: inc/img/graph.png  used on input line 52.
+(pdftex.def)             Requested size: 341.44667pt x 256.0748pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<inc/img/graph1.png, id=587, 462.528pt x 346.896pt>
+[24]
+<inc/img/graph1.png, id=400, 462.528pt x 346.896pt>
 File: inc/img/graph1.png Graphic file (type png)
 <use inc/img/graph1.png>
 Package pdftex.def Info: inc/img/graph1.png  used on input line 58.
-(pdftex.def)             Requested size: 379.38832pt x 284.52756pt.
+(pdftex.def)             Requested size: 341.44667pt x 256.0748pt.
+ [25 <./inc/img/graph.png> <./inc/img/graph1.png>] [26]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package keyval Info: directivestyle undefined on input line 91.
+Package keyval Info: directivestyle undefined on input line 91.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26] [27 <./inc/img/graph.png>] [28 <./inc/img/graph1.png>]
-<inc/img/memory.png, id=613, 749.80125pt x 285.31593pt>
-File: inc/img/memory.png Graphic file (type png)
-<use inc/img/memory.png>
-Package pdftex.def Info: inc/img/memory.png  used on input line 84.
-(pdftex.def)             Requested size: 448.63715pt x 170.71652pt.
-) [29 <./inc/img/memory.png (PNG copy)>]
+(../report/inc/lst/lst2.txt) [27]) [28]
 \openout2 = `50-conclusion.aux'.
 
- (./50-conclusion.tex) [30
+ (./50-conclusion.tex) [29
 
 
 
@@ -1622,28 +1562,45 @@ Package pdftex.def Info: inc/img/memory.png  used on input line 84.
 ]
 \openout2 = `51-biblio.aux'.
 
- (./51-biblio.tex (./report.bbl)) [31
+
+(./51-biblio.tex (./report.bbl)) [30
 
 
 
 
-] (./report.aux (./00-title.aux) (./01-contents.aux) (./02-intro.aux)
+]
+\openout2 = `60-addition.aux'.
+
+ (./60-addition.tex
+Package keyval Info: directivestyle undefined on input line 10.
+Package keyval Info: directivestyle undefined on input line 10.
+
+(../src/matrix/matrix.go [31
+
+
+
+
+])
+Package keyval Info: directivestyle undefined on input line 19.
+Package keyval Info: directivestyle undefined on input line 19.
+ (../src/time_measure/time_measure.go [32]
+[33])) [34] (./report.aux (./00-title.aux) (./01-contents.aux) (./02-intro.aux)
 (./10-analysis.aux) (./20-design.aux) (./30-impl.aux) (./40-research.aux)
-(./50-conclusion.aux) (./51-biblio.aux))
+(./50-conclusion.aux) (./51-biblio.aux) (./60-addition.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: C16E6C8760839B13ACA45BF88B0833B4;6434.
+(rerunfilecheck)             Checksum: 121101D02337134EE446EF6F1F4DDF8D;6589.
  ) 
 Here is how much of TeX's memory you used:
- 39144 strings out of 479721
- 906434 string characters out of 5887697
- 1570849 words of memory out of 5000000
- 55984 multiletter control sequences out of 15000+600000
+ 39381 strings out of 479721
+ 910015 string characters out of 5887697
+ 1594274 words of memory out of 5000000
+ 56190 multiletter control sequences out of 15000+600000
  484362 words of font info for 59 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 106i,9n,99p,950b,2081s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 106i,9n,99p,950b,2158s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/nastya/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/latt1000.600p
 k> </home/nastya/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0600.600p
 k> </home/nastya/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/latt1440.600p
@@ -1659,10 +1616,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (31 pages, 713836 bytes).
+Output written on report.pdf (34 pages, 627451 bytes).
 PDF statistics:
- 1260 PDF objects out of 1440 (max. 8388607)
- 701 compressed objects within 8 object streams
- 375 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1285 PDF objects out of 1440 (max. 8388607)
+ 722 compressed objects within 8 object streams
+ 392 named destinations out of 1000 (max. 500000)
+ 262 words of extra memory for PDF output out of 10000 (max. 10000000)
 

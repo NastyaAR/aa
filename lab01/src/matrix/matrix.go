@@ -11,36 +11,35 @@ type Matrix struct {
 	Inf  bool
 }
 
-func (matr *Matrix) MakeMatrix() {
-	matr.Matr = make([][]int, matr.M)
-	for i := range matr.Matr {
-		matr.Matr[i] = make([]int, matr.N)
+func (m *Matrix) MakeMatrix() {
+	m.Matr = make([][]int, m.M)
+	for i := range m.Matr {
+		m.Matr[i] = make([]int, m.N)
 	}
 }
 
-// receiver name (m)
-func (matr *Matrix) InitMatrix() {
-	for j := 0; j < matr.N; j++ {
-		matr.Matr[0][j] = j
+func (m *Matrix) InitMatrix() {
+	for j := 0; j < m.N; j++ {
+		m.Matr[0][j] = j
 	}
 
-	for i := 0; i < matr.M; i++ {
-		matr.Matr[i][0] = i
+	for i := 0; i < m.M; i++ {
+		m.Matr[i][0] = i
 	}
 
-	if matr.Inf {
-		for i := 1; i < matr.M; i++ {
-			for j := 1; j < matr.N; j++ {
-				matr.Matr[i][j] = -1
+	if m.Inf {
+		for i := 1; i < m.M; i++ {
+			for j := 1; j < m.N; j++ {
+				m.Matr[i][j] = -1
 			}
 		}
 	}
 }
 
-func (matr *Matrix) OutputMatrix() {
-	for i := 0; i < matr.M; i++ {
-		for j := 0; j < matr.N; j++ {
-			fmt.Printf("%5d ", matr.Matr[i][j])
+func (m *Matrix) OutputMatrix() {
+	for i := 0; i < m.M; i++ {
+		for j := 0; j < m.N; j++ {
+			fmt.Printf("%5d ", m.Matr[i][j])
 		}
 		fmt.Println()
 	}

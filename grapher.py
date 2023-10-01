@@ -14,10 +14,10 @@ class GraphCreator:
     
     def plot(self):
         for plot_fname in self.data_files:
-            data = data=self.read_data(plot_fname)
-            seaborn.lineplot(data=data, x='len', y=data.axes[1][1], label=data.axes[1][1])
+            data = self.read_data(plot_fname)
+            seaborn.lineplot(data=data, x='len', y=data.axes[1][1], marker='o', label=data.axes[1][1])
         plt.xlabel('Количество символов')
-        plt.ylabel('Время, c')
+        plt.ylabel('Время, нc')
         plt.grid()
         plt.savefig(self.dst_fname)
         

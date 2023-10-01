@@ -24,7 +24,6 @@ func OutputMenu() {
 	0. Выход `)
 }
 
-// обработка ошибок
 func ChooseOption() int {
 	choice := 0
 	fmt.Println()

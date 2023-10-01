@@ -5,7 +5,6 @@ import (
 )
 
 func GetMin(values ...int) int {
-	// камель кейс
 	cur_min := values[0]
 
 	for _, val := range values {

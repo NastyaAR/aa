@@ -8,11 +8,10 @@ import (
 	"lab1.com/matrix"
 )
 
-const N int = 1000
+const N int = 10
 const symbols string = "abcdefghijklmnopqrstuvwxyz"
 
-// приватная переменная
-const MaxInd int = 26
+const maxInd int = 26
 
 func GetCPU() int64 {
 	usage := new(syscall.Rusage)
@@ -23,7 +22,7 @@ func GetCPU() int64 {
 func GetRandomString(len int) []rune {
 	rstr := make([]rune, len)
 	for i := 0; i < len; i++ {
-		symb := rand.Intn(MaxInd)
+		symb := rand.Intn(maxInd)
 		rstr[i] = rune(symbols[symb])
 	}
 	return rstr
@@ -45,7 +44,7 @@ func MatrixLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
 
 	mtr.Matr[0][0] += 1
 
-	return (sum / float32(N)) / 1e+9, ans
+	return (sum / float32(N)) / 1, ans
 }
 
 func DamerauLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
@@ -61,7 +60,7 @@ func DamerauLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
 		sum += float32(finishTime - startTime)
 	}
 
-	return (sum / float32(N)) / 1e+9, ans
+	return (sum / float32(N)) / 1, ans
 }
 
 func MatrixDamerauLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
@@ -80,7 +79,7 @@ func MatrixDamerauLevenTimeMeasurement(str1 []rune, str2 []rune) (float32, int) 
 
 	matr.Matr[0][0] += 1
 
-	return (sum / float32(N)) / 1e+9, ans
+	return (sum / float32(N)) / 1, ans
 }
 
 func RecursiveDamerauLevenWithCacheTimeMeasurement(str1 []rune, str2 []rune) (float32, int) {
@@ -99,7 +98,7 @@ func RecursiveDamerauLevenWithCacheTimeMeasurement(str1 []rune, str2 []rune) (fl
 
 	matr.Matr[0][0] += 1
 
-	return (sum / float32(N)) / 1e+9, ans
+	return (sum / float32(N)) / 1, ans
 }
 
 func MeasureTime(rstr1 []rune, rstr2 []rune) [4]float32 {
