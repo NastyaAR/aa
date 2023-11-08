@@ -1,0 +1,24 @@
+goos: linux
+goarch: amd64
+pkg: lab1.com/algs1
+cpu: AMD Ryzen 5 4600H with Radeon Graphics         
+BenchmarkDamerauLeven5-12                          81226             13294 ns/op               0 B/op          0 allocs/op
+BenchmarkDamerauLen10-12                              18          65501505 ns/op               0 B/op          0 allocs/op
+BenchmarkDamerauLevenLen15-12                          1        212854803869 ns/op             0 B/op          0 allocs/op
+BenchmarkMatrixDamerauLevenLen5-12               1000000              1042 ns/op             432 B/op          7 allocs/op
+BenchmarkMatrixDamerauLevenLen10-12               369198              2868 ns/op            1344 B/op         12 allocs/op
+BenchmarkMatrixDamerauLevenLen15-12               197188              5785 ns/op            2432 B/op         17 allocs/op
+BenchmarkMatrixDamerauLevenLen50-12                22540             52393 ns/op           22496 B/op         52 allocs/op
+BenchmarkMatrixDamerauLevenLen100-12                5368            206314 ns/op           93184 B/op        102 allocs/op
+BenchmarkMatrixDamerauLevenCacheLen5-12           703873              1915 ns/op             432 B/op          7 allocs/op
+BenchmarkMatrixDamerauLevenCacheLen10-12          277136              6075 ns/op            1344 B/op         12 allocs/op
+BenchmarkMatrixDamerauLevenCacheLen15-12           98534             12546 ns/op            2432 B/op         17 allocs/op
+BenchmarkMatrixDamerauLevenCacheLen50-12            7834            156253 ns/op           22496 B/op         52 allocs/op
+BenchmarkMatrixDamerauLevenCacheLen100-12           1585            731190 ns/op           93184 B/op        102 allocs/op
+BenchmarkMatrixLevenLen5-12                      1000000              1038 ns/op             432 B/op          7 allocs/op
+BenchmarkMatrixLevenLen10-12                      411806              2838 ns/op            1344 B/op         12 allocs/op
+BenchmarkMatrixLevenLen15-12                      210435              5360 ns/op            2432 B/op         17 allocs/op
+BenchmarkMatrixLevenLen50-12                       23905             49641 ns/op           22496 B/op         52 allocs/op
+BenchmarkMatrixLevenLen100-12                       5313            202286 ns/op           93184 B/op        102 allocs/op
+PASS
+ok      lab1.com/algs1  237.469s 
