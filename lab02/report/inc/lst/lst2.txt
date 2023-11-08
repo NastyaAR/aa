@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: lab02/algs
+cpu: AMD Ryzen 5 4600H with Radeon Graphics         
+BenchmarkGrapeNoOpt10-12         	  391056	      5882 ns/op	    1200 B/op	      13 allocs/op
+BenchmarkGrapeNoOpt50-12         	    4334	    313408 ns/op	   22922 B/op	      53 allocs/op
+BenchmarkGrapeNoOpt100-12        	     466	   2365682 ns/op	   94476 B/op	     103 allocs/op
+BenchmarkGrapeNoOpt200-12        	      63	  20472407 ns/op	  378381 B/op	     209 allocs/op
+BenchmarkGrapeNoOpt500-12        	       3	 431211485 ns/op	 3442624 B/op	     838 allocs/op
+BenchmarkGrapeOpt1and2_10-12     	  188516	      6185 ns/op	    1200 B/op	      13 allocs/op
+BenchmarkGrapeOpt1and2_50-12     	    3373	    397454 ns/op	   22925 B/op	      53 allocs/op
+BenchmarkGrapeOpt1and2_100-12    	     468	   2491422 ns/op	   94474 B/op	     103 allocs/op
+BenchmarkGrapeOpt1and2_200-12    	      58	  22430267 ns/op	  379374 B/op	     209 allocs/op
+BenchmarkGrapeOpt1and2_500-12    	       3	 413322829 ns/op	 3442005 B/op	     837 allocs/op
+BenchmarkClassicNoOpt_10-12      	  184544	      5892 ns/op	    1040 B/op	      11 allocs/op
+BenchmarkClassicNoOpt_50-12      	    3822	    391184 ns/op	   22091 B/op	      51 allocs/op
+BenchmarkClassicNoOpt_100-12     	     464	   2754122 ns/op	   92685 B/op	     101 allocs/op
+BenchmarkClassicNoOpt_200-12     	      52	  21414936 ns/op	  377235 B/op	     208 allocs/op
+BenchmarkClassicNoOpt_500-12     	       2	 530495077 ns/op	 4120576 B/op	    1002 allocs/op
+BenchmarkClassicOpt_10-12        	  207182	      5470 ns/op	    1040 B/op	      11 allocs/op
+BenchmarkClassicOpt_50-12        	    3168	    381204 ns/op	   22093 B/op	      51 allocs/op
+BenchmarkClassicOpt_100-12       	     403	   2541602 ns/op	   92746 B/op	     101 allocs/op
+BenchmarkClassicOpt_200-12       	      58	  21901074 ns/op	  375790 B/op	     207 allocs/op
+BenchmarkClassicOpt_500-12       	       3	 476170994 ns/op	 3433813 B/op	     835 allocs/op
+BenchmarkStrassenNoOpt_10-12     	     504	   2378451 ns/op	  591878 B/op	   29912 allocs/op
+BenchmarkStrassenNoOpt_50-12     	       8	 130821524 ns/op	29886534 B/op	 1470256 allocs/op
+BenchmarkStrassenNoOpt_100-12    	       2	 927931622 ns/op	210566864 B/op	10293777 allocs/op
+BenchmarkStrassenNoOpt_200-12    	       1	6504249701 ns/op	1478681112 B/op	72059515 allocs/op
+BenchmarkStrassenNoOpt_500-12    	       1	38492639772 ns/op	10360946760 B/op	504419085 allocs/op
+BenchmarkStrassenOpt_10-12       	     547	   2408159 ns/op	  540373 B/op	   27281 allocs/op
+BenchmarkStrassenOpt_50-12       	      10	 116502307 ns/op	27280347 B/op	 1340875 allocs/op
+BenchmarkStrassenOpt_100-12      	       2	 791231776 ns/op	192251576 B/op	 9387957 allocs/op
+BenchmarkStrassenOpt_200-12      	       1	5547761377 ns/op	1350076848 B/op	65718384 allocs/op
+BenchmarkStrassenOpt_500-12      	       1	32803397495 ns/op	9459129344 B/op	460030419 allocs/op
+PASS
+ok  	lab02/algs	91.158s

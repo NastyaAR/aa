@@ -1,0 +1,187 @@
+\chapter{Технологическая часть}
+
+В данном разделе представлены требования к программному обеспечению, а также рассматриваются средства реализации и приводятся листинги кода.
+
+\section{Требования к программному обеспечению}
+
+К программе предъявляется ряд требований: на вход подаются указатели на две матрицы, на выходе --- матрица, являющаяся произведением исходных.
+
+\section{Средства реализации}
+
+В качестве языка программирования для реализации лабораторной работы был выбран многопоточный язык Gо \cite{golang}. Выбор был сделан в пользу данного языка программирования, вследствие наличия пакетов для тестирования программного обеспечения.
+
+\section{Реализация}
+
+В листингах \ref{lst:clnoopt}--\ref{lst:clopt} приведены реализации алгоритмов классического алгоритма умножения матриц и оптимизированного классического алгоритма умножения матриц.
+\newpage
+
+\begin{lstinputlisting}[
+	caption={Классический алгоритм умножения матриц без оптимизаций},
+	label={lst:clnoopt},
+	style={go},
+	linerange={7-19},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Классический алгоритм умножения матриц с оптимизациями},
+	label={lst:clopt},
+	style={go},
+	linerange={21-33},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+\newpage
+
+В листингах \ref{lst:grnoopt}--\ref{lst:gropt} приведены реализации алгоритмов Винограда умножения матриц без оптимизаций и оптимизированного алгоритма Винограда умножения матриц.
+\begin{lstinputlisting}[
+	caption={Алгоритм Винограда умножения матриц без оптимизаций},
+	label={lst:grnoopt},
+	style={go},
+	linerange={35-73},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\pagebreak
+
+\begin{lstinputlisting}[
+	caption={Оптимизированный алгоритм Винограда умножения матриц},
+	label={lst:gropt},
+	style={go},
+	linerange={196-236},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+\pagebreak
+
+В листингах \ref{lst:shtnoopt}--\ref{lst:shtopt3} приведены реализации алгоритмов Штрассена умножения матриц без оптимизаций и оптимизированного алгоритма Штрассена умножения матриц.
+
+\begin{lstinputlisting}[
+	caption={Алгоритм Штрассена умножения матриц без оптимизаций},
+	label={lst:shtnoopt},
+	style={go},
+	linerange={361-402},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Продолжение листинга \ref{lst:shtnoopt}},
+	label={lst:shtnoopt2},
+	style={go},
+	linerange={403-432},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Оптимизированный алгоритм Штрассена умножения матриц},
+	label={lst:shtopt},
+	style={go},
+	linerange={434-445},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Продолжение листинга \ref{lst:shtopt}},
+	label={lst:shtopt2},
+	style={go},
+	linerange={446-492},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Продолжение листинга \ref{lst:shtopt2}},
+	label={lst:shtopt3},
+	style={go},
+	linerange={493-499},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+Листинги со служебным кодом находятся в приложении.
+
+\section{Функциональное тестирование}
+
+В таблице \ref{tabular:functional_test} приведены функциональные тесты для алгоритмов умножения матриц: классического алгоритма умножения матриц, алгоритма Винограда умножения матриц, алгоритма Штрассена умножения матриц (неоптимизированная и оптимизированная версии). Все тесты пройдены успешно.
+
+\begin{table}[h]
+	\caption{\label{tabular:functional_test} Функциональные тесты}
+	\begin{tabularx}{\textwidth}{|X|X|X|}
+		\hline   
+		\centering \textbf{Матрица 1} & \centering \textbf{Матрица 2} & \centering \textbf{Ожидаемый результат} \tabularnewline
+		\hline
+		\centering
+		$\begin{pmatrix}
+			1 & 2\\
+			3 & 4\\
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			5 & 6\\
+			7 & 8\\
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			19 & 22\\
+			43 & 50\\
+		\end{pmatrix}$\tabularnewline
+		\hline
+		\centering
+		$\begin{pmatrix}
+			10
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			5
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			50
+		\end{pmatrix}$ \tabularnewline
+		\hline
+		\centering
+		$\begin{pmatrix}
+			10\\
+			20\\
+			30
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			40 & 50 & 60\\
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			400 &  500  & 600\\ 
+			800 & 1000 & 1200\\ 
+			1200 & 1500 & 180
+		\end{pmatrix}$ \tabularnewline
+		\hline
+		\centering
+		$\begin{pmatrix}
+			1   &  2  &   3\\ 
+			4   &  5  &   6
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			1  &   2  &   3   &  4\\ 
+			5  &   6  &   7   &  8\\ 
+			9  &  10  &  11   & 12
+		\end{pmatrix}$ &
+		\centering
+		$\begin{pmatrix}
+			38 &   44  &  50  &  56\\ 
+			83  &  98  & 113 &  128
+		\end{pmatrix}$ \tabularnewline
+		\hline
+		%\noalign
+	\end{tabularx}
+\end{table}
+
+
+\pagebreak
+
+\section{Пример работы}
+
+Демонстрация работы программы приведена на рисунке \ref{img:ex}.
+
+\boximg{165mm}{ex}{Демонстрация работы программы}
+
+\section*{Вывод}
+
+В результате, были разработаны и протестированы следующие алгоритмы: классический алгоритм умножения матриц без оптимизаций, оптимизированный алгоритм умножения матриц, классический алгоритм Винограда, оптимизированный алгоритм Винограда, классический алгоритм Штрассена, оптимизированный алгоритма Штрассена
