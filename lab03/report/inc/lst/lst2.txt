@@ -1,0 +1,21 @@
+goos: linux
+goarch: amd64
+pkg: lab03/algs
+cpu: AMD Ryzen 5 4600H with Radeon Graphics         
+BenchmarkBlock100-12               27331             41861 ns/op           93184 B/op        102 allocs/op
+BenchmarkBlock200-12               10185            116865 ns/op          365058 B/op        202 allocs/op
+BenchmarkBlock500-12                1305            974032 ns/op         2064404 B/op        502 allocs/op
+BenchmarkBlock700-12                 691           1651312 ns/op         4325408 B/op        702 allocs/op
+BenchmarkBlock1000-12                357           3564946 ns/op         8224808 B/op       1002 allocs/op
+BenchmarkRadix100-12               38264             31286 ns/op           72576 B/op         81 allocs/op
+BenchmarkRadix200-12               22082             54853 ns/op          145152 B/op         81 allocs/op
+BenchmarkRadix500-12                8226            134449 ns/op          331778 B/op         81 allocs/op
+BenchmarkRadix700-12                6502            165200 ns/op          497668 B/op         81 allocs/op
+BenchmarkRadix1000-12               4345            266150 ns/op          663559 B/op         81 allocs/op
+BenchmarkMerge100-12               34336             35820 ns/op           13256 B/op        307 allocs/op
+BenchmarkMerge200-12               15704             77325 ns/op           30720 B/op        627 allocs/op
+BenchmarkMerge500-12                5532            191907 ns/op           73425 B/op       1500 allocs/op
+BenchmarkMerge700-12                3526            309925 ns/op          148762 B/op       2280 allocs/op
+BenchmarkMerge1000-12               2809            433071 ns/op          171939 B/op       3006 allocs/op
+PASS
+ok      lab03/algs      21.680s
