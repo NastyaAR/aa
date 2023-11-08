@@ -1,0 +1,142 @@
+\chapter{Технологическая часть}
+
+В данном разделе представлены требования к программному обеспечению, а также рассматриваются средства реализации и приводятся листинги кода.
+
+\section{Требования к программному обеспечению}
+
+К программе предъявляется ряд требований: на вход подаётся массив, содержащий целые числа, на выходе --- отсортированный массив, содержащий целые числа.
+
+\section{Средства реализации}
+
+В качестве языка программирования для реализации лабораторной работы был выбран многопоточный язык Gо \cite{golang}. Выбор был сделан в пользу данного языка программирования, вследствие наличия пакетов для тестирования программного обеспечения.
+
+\section{Реализация}
+
+В листингах \ref{lst:block1}--\ref{lst:block2} приведена реализация алгоритма блочной сортировки.
+\newpage
+
+\begin{lstinputlisting}[
+	caption={Алгоритм блочной сортировки},
+	label={lst:block1},
+	style={go},
+	linerange={24-71},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Продолжение листинга \ref{lst:block1}},
+	label={lst:block2},
+	style={go},
+	linerange={72-83},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+В листингах \ref{lst:radix1}--\ref{lst:radix2} приведена реализация алгоритма поразрядной сортировки.
+
+\begin{lstinputlisting}[
+	caption={Алгоритм поразрядной сортировки},
+	label={lst:radix1},
+	style={go},
+	linerange={85-113},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Продолжение листинга \ref{lst:radix1}},
+	label={lst:radix2},
+	style={go},
+	linerange={114-143},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+В листингах \ref{lst:merge1}--\ref{lst:merge2} приведена реализация алгоритма сортировки слиянием.
+
+\begin{lstinputlisting}[
+	caption={Алгоритм сортировки слиянием},
+	label={lst:merge1},
+	style={go},
+	linerange={145-155},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+\begin{lstinputlisting}[
+	caption={Продолжение листинга \ref{lst:merge1}},
+	label={lst:merge2},
+	style={go},
+	linerange={156-173},
+	]{../src/algs/algs.go}
+\end{lstinputlisting}
+
+Листинги со служебным кодом находятся в приложении.
+
+\section{Функциональное тестирование}
+
+В таблице \ref{tabular:functional_test} приведены функциональные тесты для алгоритмов сортировки массивов целых чисел: алгоритма блочной сортировки, алгоритма поразрядной сортировки, алгоритма сортировки слиянием. Все тесты пройдены успешно.
+
+\begin{table}[h]
+	\caption{\label{tabular:functional_test} Функциональные тесты}
+	\begin{tabularx}{\textwidth}{|X|X|}
+		\hline   
+		\centering \textbf{Массив} & \centering \textbf{Ожидаемый результат} \tabularnewline
+		\hline
+		\centering
+		$\begin{matrix}
+			1 & 2 & 3 & 4 & 5\\
+		\end{matrix}$ &
+		\centering
+		$\begin{matrix}
+			1 & 2 & 3 & 4 & 5\\
+		\end{matrix}$\tabularnewline
+		\hline
+		\centering
+		$\begin{matrix}
+			5 & 4 & 3 & 2 & 1\\
+		\end{matrix}$ &
+		\centering
+		$\begin{matrix}
+			1 & 2 & 3 & 4 & 5\\
+		\end{matrix}$\tabularnewline
+		\hline
+		\centering
+		$\begin{matrix}
+			1 & 1 & 1 & 1 & 1\\
+		\end{matrix}$ &
+		\centering
+		$\begin{matrix}
+			1 & 1 & 1 & 1 & 1\\
+		\end{matrix}$\tabularnewline
+		\hline
+		\centering
+		$\begin{matrix}
+			1 & 23 & -3 & 94 & -517\\
+		\end{matrix}$ &
+		\centering
+		$\begin{matrix}
+			-517 & -3 & 1 & 23 & 94\\
+		\end{matrix}$\tabularnewline
+		\hline
+		\centering
+		$\begin{matrix}
+			1\\
+		\end{matrix}$ &
+		\centering
+		$\begin{matrix}
+			1\\
+		\end{matrix}$\tabularnewline
+		\hline
+		%\noalign
+	\end{tabularx}
+\end{table}
+
+
+\pagebreak
+
+\section{Пример работы}
+
+Демонстрация работы программы приведена на рисунке \ref{img:ex}.
+
+\boximg{130mm}{ex}{Демонстрация работы программы}
+
+\section*{Вывод}
+
+В результате, были разработаны и протестированы следующие алгоритмы: алгоритм блочной сортировки, алгоритм поразрядной сортировки, алгоритм сортировки слиянием.
